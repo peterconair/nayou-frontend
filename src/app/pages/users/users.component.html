@@ -1,0 +1,74 @@
+<!-- Page -->
+<div class="page">
+  <div class="page-header">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+      <li class="breadcrumb-item">User Management</li>
+      <li class="breadcrumb-item active">Users</li>
+    </ol>
+    <h1 class="page-title"></h1>
+    <div class="page-header-actions">
+      <a class="btn btn-sm btn-inverse btn-round" href="https://alertifyjs.org/" target="_blank">
+        <i class="icon wb-link" aria-hidden="true"></i>
+        <span class="hidden-sm-down"><p>
+  Displaying {{ users.length }} users.
+</p></span>
+      </a>
+    </div>
+  </div>
+  <div class="page-content">
+    <div class="panel">
+      <div class="panel-body container-fluid">
+        <div class="row row-lg">
+          <h4 class="title">User List</h4>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Created Date</th>
+                <th>Updated Date</th>
+                <th>Edit</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of users">
+                <td>
+                  <span class="text-danger text-semibold"><i class="icon wb-chevron-down-mini" aria-hidden="true"></i>                            28.76%</span>
+                </td>
+                <td>{{ user.userId }}</td>
+                <td>{{ user.firstName}} {{user.lastName}}</td>
+                <td>{{ user.userName }}</td>
+                <td>{{ user.gender }}</td>
+                <td>{{ user.created | date:'dd/mm/yyyy HH:mm:ss'}}</td>
+                <td>{{ user.updated | date:'dd/mm/yyyy HH:mm:ss'}}</td>
+                <td>
+                  <a [routerLink]="['/users', user.userId]">
+                    <i class="icon wb-edit"></i>
+                  </a>
+                </td>
+                <td>
+                  <a (click)="deleteUser(user)" href="">
+                    <i class="icon wb-trash"></i>
+                  </a>
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="btn-right">
+            <a routerLink="/users/new">
+              <button type="button" class="btn btn-floating btn-danger "><i class="icon wb-plus" aria-hidden="true"></i></button>
+            </a>
+          </div>
+
+        </div>
+      </div>
+      <!-- End Panel Alertify -->
+    </div>
+  </div>
+  <!-- End Page -->

@@ -1,0 +1,85 @@
+<div class="page">
+  <!-- Page Header -->
+  <div class="page-header">
+    <h4 class="page-title"></h4>
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#/dashboard">Home</a></li>
+      <li class="breadcrumb-item"><a href="">User Management</a></li>
+      <li class="breadcrumb-item active"> {{ title }} </li>
+
+    </ol>
+  </div>
+  <!-- End Page Header -->
+  <!-- Page Content -->
+  <div class="page-content">
+
+    <!-- Panel -->
+    <div class="panel">
+      <div class="panel-heading">
+
+      </div>
+      <div class="panel-body">
+
+
+        <form [formGroup]="form" (ngSubmit)="save()">
+          <div class="row">
+            <div class="form-group col-xs-12 col-md-6">
+              <label class="form-control-label" for="inputBasicFirstName">First Name</label>
+              <input id="firtName" type="text" class="form-control" placeholder="First Name" [(ngModel)]="user.firstName" formControlName="firstName"
+                [class.invalid]="form.controls['firstName'].touched && !form.controls['firstName'].valid" required autocomplete="off">
+            </div>
+
+            <div class="form-group col-xs-12 col-md-6">
+              <label class="form-control-label" for="inputBasicFirstName">Last Name</label>
+              <input id="lastName" type="text" class="form-control" placeholder="Last Name" [(ngModel)]="user.lastName" formControlName="lastName"
+                [class.invalid]="form.controls['lastName'].touched && !form.controls['lastName'].valid" required autocomplete="off">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-control-label">Gender</label>
+            <div>
+              <div class="radio-custom radio-default radio-inline">
+                <input type="radio" id="inputGenderMale" name="gender" [(ngModel)]="user.gender" formControlName="gender" value="Male" checked/>
+                <label for="inputGenderMale">Male</label>
+              </div>
+              <div class="radio-custom radio-default radio-inline">
+                <input type="radio" id="inputGenderFemale" name="gender" [(ngModel)]="user.gender" formControlName="gender" value="Female"
+                />
+                <label for="inputGenderFemale">Female</label>
+              </div>
+            </div>
+          </div>
+          <!-- -->
+          <div class="form-group">
+            <label class="form-control-label" for="inputBasicEmail">User Name</label>
+            <input id="userName" type="email" class="form-control" placeholder="User Name" [(ngModel)]="user.userName" formControlName="userName"
+              [class.invalid]="form.controls['userName'].touched && !form.controls['userName'].valid" required autocomplete="off">
+          </div>
+
+          <div class="form-group">
+
+            <label class="form-control-label" for="inputBasicFirstName">Password</label>
+            <input id="password" type="password" class="form-control" placeholder="Password" [(ngModel)]="user.password" formControlName="password"
+              [class.invalid]="form.controls['password'].touched && !form.controls['password'].valid" required autocomplete="off">
+              <label class="form-control-label" for="inputBasicFirstName">Password</label>
+              <input id="password2" type="password" class="form-control" placeholder="Password Again" [(ngModel)]="user.password" formControlName="password"
+                [class.invalid]="form.controls['password'].touched && !form.controls['password'].valid" required autocomplete="off">
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary" id="registerButton" [disabled]="!form.valid">Save</button>
+            <button class="btn btn-default" [routerLink]="['/users']">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- End Panel -->
+
+    <!-- Panel -->
+    <div class="panel">
+    </div>
+    <!-- End Panel -->
+
+  </div>
+  <!-- End Page Content -->
+</div>

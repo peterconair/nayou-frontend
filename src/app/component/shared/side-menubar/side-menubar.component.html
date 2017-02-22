@@ -1,0 +1,135 @@
+<div class="site-menubar">
+  <div class="site-menubar-body">
+    <div>
+      <div>
+        <ul class="site-menu" data-plugin="menu">
+          <li class="site-menu-item has-sub">
+            <a href="javascript:void(0)">
+              <i class="site-menu-icon wb-dashboard" aria-hidden="true"></i>
+              <span class="site-menu-title">Dashboard</span>
+              <div class="site-menu-badge">
+                <span class="tag tag-pill tag-success">3</span>
+              </div>
+            </a>
+            <ul class="site-menu-sub">
+              <li class="site-menu-item">
+                <a class="animsition-link" [routerLink]="['dashboard']">
+                  <span class="site-menu-title">Dashboard v1</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="site-menu-item ">
+            <a href="javascript:void(0)">
+              <i class="site-menu-icon wb-dashboard" aria-hidden="true"></i>
+              <span class="site-menu-title">Home</span>
+              <div class="site-menu-badge">
+                <span class="tag tag-danger tag-round m-r-25">new</span>
+              </div>
+            </a>
+          </li>
+          <li class="site-menu-item ">
+            <a href="javascript:void(0)" [routerLink]="['content']">
+              <i class="site-menu-icon wb-dashboard" aria-hidden="true"></i>
+              <span class="site-menu-title">Content</span>
+              <div class="site-menu-badge">
+                <span class="tag tag-pill tag-success">3</span>
+              </div>
+            </a>
+          </li>
+
+          <li class="site-menu-category">User Management</li>
+          <li class="site-menu-item">
+            <li class="site-menu-item ">
+              <a href="javascript:void(0)" [routerLink]="['register']">
+                <i class="site-menu-icon wb-dashboard" aria-hidden="true"></i>
+                <span class="site-menu-title">Register</span>
+              </a>
+            </li>
+
+            <li class="site-menu-item ">
+              <a href="javascript:void(0)" [routerLink]="['userlist']">
+                <i class="site-menu-icon wb-dashboard" aria-hidden="true"></i>
+                <span class="site-menu-title">User List</span>
+              </a>
+            </li>
+
+            <li class="site-menu-item ">
+              <a href="javascript:void(0)" [routerLink]="['users']">
+                <i class="site-menu-icon wb-dashboard" aria-hidden="true"></i>
+                <span class="site-menu-title">Users</span>
+              </a>
+            </li>
+
+            <li class="site-menu-category">Project</li>
+
+            <li class="site-menu-item has-sub">
+              <a href="javascript:void(0)">
+                <i class="site-menu-icon wb-layout" aria-hidden="true"></i>
+                <span class="site-menu-title">Layouts</span>
+                <span class="site-menu-arrow"></span>
+              </a>
+              <ul class="site-menu-sub">
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="layouts/menu-collapsed-alt.html">
+                    <span class="site-menu-title">Menu Collapsed Alt</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="layouts/panel-transition.html">
+                    <span class="site-menu-title">Panel Transition</span>
+                  </a>
+                </li>
+
+                <li class="site-menu-item has-sub">
+                  <a href="javascript:void(0)">
+                    <span class="site-menu-title">Page Aside</span>
+                    <div class="site-menu-label">
+                      <span class="tag tag-danger tag-round m-r-25">new</span>
+                    </div>
+                    <span class="site-menu-arrow"></span>
+                  </a>
+                  <ul class="site-menu-sub">
+                    <li class="site-menu-item">
+                      <a class="animsition-link" href="layouts/aside-left-static.html">
+                        <span class="site-menu-title">Left Static</span>
+                      </a>
+                    </li>
+
+                    <li class="site-menu-item">
+                      <a class="animsition-link" href="layouts/aside-right-fixed.html">
+                        <span class="site-menu-title">Right Fixed</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+        </ul>
+
+        <div class="site-menubar-section">
+          <h5>
+            Milestone
+            <span class="pull-xs-right">30%</span>
+          </h5>
+          <div class="progress progress-xs">
+            <div class="progress-bar active" style="width: 30%;" role="progressbar"></div>
+          </div>
+          <h5>
+            Release
+            <span class="pull-xs-right">60%</span>
+          </h5>
+          <div class="progress progress-xs">
+            <div class="progress-bar progress-bar-warning" style="width: 60%;" role="progressbar"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <app-side-menubar-bottom>
+
+  </app-side-menubar-bottom>
+
+</div>
